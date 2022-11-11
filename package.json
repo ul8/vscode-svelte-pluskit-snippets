@@ -2,7 +2,7 @@
   "publisher": "garlandcrow",
   "name": "vscode-svelte-pluskit-snippets",
   "displayName": "Sveltekit Snippets for +Kit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "description": "snippets for sveltekit since the pluskit changes",
   "author": "Garland Crow <garlandcrow@protonmail.com>",
