@@ -113,7 +113,6 @@
     "vscode": "^1.59.0"
   },
   "scripts": {
-    "vscode:prepublish": "npm run pack",
     "publish": "vsce publish",
     "pack": "vsce package",
     "release": "bumpp && npm run publish"
