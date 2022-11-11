@@ -1,0 +1,36 @@
+{
+  "sveltekit+page.svelte": {
+    "body": [
+      "<script lang=\"ts\">",
+      "  import type { PageData, ActionData } from './$$types'",
+      "",
+      "  export let data: PageData",
+      "  export let form: ActionData",
+      "  $1",
+      "</script>"
+    ],
+    "description": "+page.server.ts template"
+  },
+  "sveltekit+layout.svelte": {
+    "body": [
+      "<script lang=\"ts\">",
+      "  import type { PageData } from './$$types'",
+      "",
+      "  export let data: PageData",
+      "  $1",
+      "</script>"
+    ],
+    "description": "+layout.svelte template"
+  },
+  "sveltekit+error.svelte": {
+    "body": [
+      "<script lang=\"ts\">",
+      "  import { page } from '$app/stores'",
+      "  $1",
+      "</script>",
+      "",
+      "<h1>{$page.status}: {$page.error.message}</h1>"
+    ],
+    "description": "+layout.svelte template"
+  }
+}

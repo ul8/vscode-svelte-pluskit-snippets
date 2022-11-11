@@ -4,7 +4,7 @@
   "displayName": "vscode-svelte-pluskit-snippets",
   "version": "0.1.0",
   "private": true,
-  "description": "",
+  "description": "snippets for sveltekit since the pluskit changes",
   "author": "Garland Crow <garlandcrow@protonmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/garlandcrow",
@@ -20,46 +20,106 @@
     "url": "https://github.com/sponsors/garlandcrow"
   },
   "categories": [
-    "Other"
+    "Snippets"
   ],
-  "main": "./dist/index.js",
-  "icon": "res/icon.png",
-  "files": [
-    "dist"
-  ],
-  "engines": {
-    "vscode": "^1.69.0"
+  "contributes": {
+    "keybindings": [
+      {
+        "key": "cmd+k n",
+        "command": "editor.action.insertSnippet",
+        "when": "resourceFilename == +layout.server.ts",
+        "args": {
+          "langId": "typescript",
+          "name": "sveltekit+layout.server.ts"
+        }
+      },
+      {
+        "key": "cmd+k n",
+        "command": "editor.action.insertSnippet",
+        "when": "resourceFilename == +layout.ts",
+        "args": {
+          "langId": "typescript",
+          "name": "sveltekit+layout.ts"
+        }
+      },
+      {
+        "key": "cmd+k n",
+        "command": "editor.action.insertSnippet",
+        "when": "resourceFilename == +layout.svelte",
+        "args": {
+          "langId": "typescript",
+          "name": "sveltekit+layout.svelte"
+        }
+      },
+      {
+        "key": "cmd+k n",
+        "command": "editor.action.insertSnippet",
+        "when": "resourceFilename == +page.ts",
+        "args": {
+          "langId": "typescript",
+          "name": "sveltekit+page.ts"
+        }
+      },
+      {
+        "key": "cmd+k n",
+        "command": "editor.action.insertSnippet",
+        "when": "resourceFilename == +page.server.ts",
+        "args": {
+          "langId": "typescript",
+          "name": "sveltekit+page.server.ts"
+        }
+      },
+      {
+        "key": "cmd+k n",
+        "command": "editor.action.insertSnippet",
+        "when": "resourceFilename == +page.svelte",
+        "args": {
+          "langId": "svelte",
+          "name": "sveltekit+page.svelte"
+        }
+      },
+      {
+        "key": "cmd+k n",
+        "command": "editor.action.insertSnippet",
+        "when": "resourceFilename == +server.ts",
+        "args": {
+          "langId": "typescript",
+          "name": "sveltekit+server.ts"
+        }
+      },
+      {
+        "key": "cmd+k n",
+        "command": "editor.action.insertSnippet",
+        "when": "resourceFilename == +error.svelte",
+        "args": {
+          "langId": "svelte",
+          "name": "sveltekit+error.svelte"
+        }
+      }
+    ],
+    "snippets": [
+      {
+        "language": "svelte",
+        "path": "./snippets/svelte.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript.json"
+      }
+    ]
   },
-  "activationEvents": [
-    "onStartupFinished"
-  ],
+  "icon": "res/icon.png",
+  "engines": {
+    "vscode": "^1.59.0"
+  },
   "scripts": {
-    "build": "tsup src/index.ts --external vscode",
-    "dev": "npm run build --watch",
-    "lint": "eslint .",
-    "vscode:prepublish": "npm run build",
-    "publish": "vsce publish --no-dependencies",
-    "pack": "vsce package --no-dependencies",
-    "test": "vitest",
-    "typecheck": "tsc --noEmit",
+    "vscode:prepublish": "npm run pack",
+    "publish": "vsce publish",
+    "pack": "vsce package",
     "release": "bumpp && npm run publish"
   },
   "devDependencies": {
-    "@types/node": "^18.6.4",
-    "@types/vscode": "^1.69.0",
-    "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.42.1",
     "bumpp": "^8.2.1",
-    "eslint": "^8.21.0",
-    "eslint-config-prettier": "^8.5.0",
-    "esno": "^0.16.3",
-    "pnpm": "^7.8.0",
-    "prettier": "^2.7.1",
-    "rimraf": "^3.0.2",
-    "tsup": "^6.2.1",
-    "typescript": "^4.7.4",
-    "vite": "^3.0.4",
-    "vitest": "^0.21.0",
     "vsce": "^2.10.0"
   }
 }

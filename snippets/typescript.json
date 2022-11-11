@@ -1,0 +1,67 @@
+{
+  "sveltekit+page.ts": {
+    "body": [
+      "import { error, redirect } from '@sveltejs/kit'",
+      "import type { PageLoad } from './$$types'",
+      "",
+      "export const load: PageLoad = async function (${1:event}) {",
+      "  return {}",
+      "}"
+    ],
+    "description": "+page.ts template"
+  },
+  "sveltekit+page.server.ts": {
+    "body": [
+      "import { error, invalid, redirect } from '@sveltejs/kit'",
+      "import type { PageServerLoad, Actions } from './$$types'",
+      "",
+      "export const load: PageServerLoad = async function (${1:event}) {",
+      "  return {}",
+      "}",
+      "",
+      "export const actions: Actions = {",
+      "  default: async (event) => {",
+      "    return {}",
+      "  },",
+      "}"
+    ],
+    "description": "+page.server.ts template"
+  },
+  "sveltekit+layout.ts": {
+    "body": [
+      "import { error, redirect } from '@sveltejs/kit'",
+      "import type { LayoutLoad } from './$$types'",
+      "",
+      "export const load: LayoutLoad = async function (${1:event}) {",
+      "  return {}",
+      "}"
+    ],
+    "description": "+layout.ts template"
+  },
+  "sveltekit+layout.server.ts": {
+    "body": [
+      "import { error, redirect } from '@sveltejs/kit'",
+      "import type { LayoutServerLoad } from './$$types'",
+      "",
+      "export const load: LayoutServerLoad = async function (${1:event}) {",
+      "  return {}",
+      "}"
+    ],
+    "description": "+layout.server.ts template"
+  },
+  "sveltekit+server.ts": {
+    "body": [
+      "import { error, json } from '@sveltejs/kit'",
+      "import type { RequestHandler } from './$$types'",
+      "",
+      "export const GET: RequestHandler = async function (event) {",
+      "  return json({})",
+      "}",
+      "",
+      "export const POST: RequestHandler = async function (event) {",
+      "  return json({})",
+      "}"
+    ],
+    "description": "+server.ts template"
+  }
+}
