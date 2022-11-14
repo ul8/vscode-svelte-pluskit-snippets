@@ -25,11 +25,11 @@
   "sveltekit+error.svelte": {
     "body": [
       "<script lang=\"ts\">",
-      "  import { page } from '$app/stores'",
+      "  import { page } from '$$app/stores'",
       "  $1",
       "</script>",
       "",
-      "<h1>{$page.status}: {$page.error.message}</h1>"
+      "<h,1>{$$page.status}: {$$page.error.message}</h,1>"
     ],
     "description": "+error.svelte template"
   }

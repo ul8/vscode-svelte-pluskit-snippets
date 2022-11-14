@@ -20,7 +20,7 @@
       "}",
       "",
       "export const actions: Actions = {",
-      "  default: async (event) => {",
+      "  default: async (${2:event) => {",
       "    return {}",
       "  },",
       "}"
@@ -54,11 +54,11 @@
       "import { error, json } from '@sveltejs/kit'",
       "import type { RequestHandler } from './$$types'",
       "",
-      "export const GET: RequestHandler = async function (event) {",
+      "export const GET: RequestHandler = async function (${1:event) {",
       "  return json({})",
       "}",
       "",
-      "export const POST: RequestHandler = async function (event) {",
+      "export const POST: RequestHandler = async function (${2:event) {",
       "  return json({})",
       "}"
     ],
